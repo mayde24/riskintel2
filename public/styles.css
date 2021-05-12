@@ -6788,7 +6788,8 @@ button.close {
 html, body {
   height: 100%;
   overflow-x: hidden;
-  cursor: default;
+  cursor: none;
+  font-family: "Open Sans", sans-serif !important;
 }
 body {
   margin: 0;
@@ -6850,7 +6851,7 @@ svg:not(:root).svg-inline--fa {
   transition: 0.5s;
 }
 .icon-header:hover {
-  color: #B21A1A;
+  color: #D30013;
   transition: 0.5s;
 }
 .logo-header img {
@@ -6865,13 +6866,12 @@ svg:not(:root).svg-inline--fa {
   position: fixed;
   width: 30px;
   height: 30px;
-  border: 1px solid #641717;
+  border: 1px solid #D30013;
   border-radius: 50%;
   left: 0;
   top: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: 0.1s;
   z-index: 2000;
   opacity: 0.7;
   animation: cursor-animation 1s infinite;
@@ -6891,7 +6891,7 @@ svg:not(:root).svg-inline--fa {
   position: fixed;
   width: 8px;
   height: 8px;
-  background-color: #401111;
+  background-color: #B20000;
   border-radius: 50%;
   left: 0;
   top: 0;
@@ -6915,6 +6915,34 @@ svg:not(:root).svg-inline--fa {
   transition: 0.1s;
 }
 .cursor2-expand {
+  opacity: 0;
+  transition: 0.1s;
+}
+.cursor-hover {
+  width: 40px;
+  height: 40px;
+  transition: 0.1s;
+  animation: size-cursor 1s;
+  transform: translate(-25%, -25%);
+}
+@keyframes size-cursor {
+  0% {
+    transition: 1s;
+    width: 30px;
+    height: 30px;
+  }
+  60% {
+    transition: 1s;
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    transition: 1s;
+    width: 40px;
+    height: 40px;
+  }
+}
+.cursor2-hover {
   opacity: 0;
   transition: 0.1s;
 }
