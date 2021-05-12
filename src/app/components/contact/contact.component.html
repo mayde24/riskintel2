@@ -1,0 +1,53 @@
+<!-- HEADER --------------------------------------->
+<app-header></app-header>
+
+<!-- CONTACT --------------------------------------->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()"  class="all-window">
+  <div class="background">
+    <img src="https://cdn.pixabay.com/photo/2018/07/14/11/32/network-3537400_1280.png" alt="" class="back-img">
+  </div>
+  <div class="contact-container">
+    <div class="info-ligne champ">
+      <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input type="text" placeholder="Nom" matInput formControlName="nom" required>
+        <mat-error *ngIf="form.controls.nom.hasError('required')">Champ obligatoire</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Prénom</mat-label>
+        <input type="text" placeholder="Prénom" matInput formControlName="prenom" required>
+        <mat-error *ngIf="form.controls.prenom.hasError('required')">Champ obligatoire</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="info-other">
+      <div class="champ">
+        <mat-form-field appearance="fill">
+          <mat-label>Entrez votre email</mat-label>
+          <input type="text" placeholder="pat@example.com" matInput formControlName="email" required>
+          <mat-error *ngIf="form.controls.email.hasError('required')">Champ obligatoire</mat-error>
+          <mat-error *ngIf="form.controls.email.hasError('email')">Email non valide</mat-error>
+        </mat-form-field>
+      </div>
+      <br>
+      <div class="champ">
+        <mat-form-field appearance="fill">
+          <mat-label>Sujet de la prise de contact</mat-label>
+          <mat-select formControlName="sujet" required>
+            <mat-option *ngFor="let sujet of sujets" value="{{sujet._valeur}}">{{sujet._message}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <br>
+      <div class="champ">
+        <mat-form-field appearance="fill">
+          <mat-label>Votre message</mat-label>
+          <textarea placeholder="Votre message..." matInput formControlName="message" required></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="champ">
+    <button [disabled]="form.invalid" mat-raised-button>Envoyer</button>
+  </div>
+</form>

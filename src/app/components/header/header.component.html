@@ -1,0 +1,43 @@
+<div class="container-header">
+  <div class="menu-header" (click)="sidenav.toggle()">
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav-content>
+        <i class="fas fa-2x fa-bars icon-header"></i>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  <div class="logo-header" (click)="goTo('home')">
+    <img src="../../../assets/img/logo-risk.jpg" alt="">
+  </div>
+</div>
+
+<mat-sidenav #sidenav mode="side" class="sidenav">
+  <div class="sidenav-header">
+    <div class="menu-header" (click)="sidenav.toggle()">
+      <i class="fas fa-2x fa-chevron-left icon-header"></i>
+    </div>
+    <div class="logo-header" (click)="goTo('home')">
+      <img src="../../../assets/img/logo-risk.jpg" alt="">
+    </div>
+  </div>
+  <div class="pages">
+    <div class="page" (click)="goTo('interviews')">
+      Interviews
+    </div>
+    <div class="page" (click)="goTo('experts')">
+      Table Ronde
+    </div>
+    <div class="page" (click)="goTo('talk-shows')">
+      Talk Show
+    </div>
+  </div>
+
+  <div class="pages2">
+    <div class="page" (click)="goTo('about-us')">
+      A propos de nous
+    </div>
+    <div class="page" (click)="goTo('contact')">
+      Contact
+    </div>
+  </div>
+</mat-sidenav>

@@ -1,0 +1,189 @@
+// all
+
+.all {
+  transition: 0.5s;
+}
+
+// Black Banner ----------------------
+
+.black-banner {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  width: 100vw;
+  height: 50vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.black-container {
+  height: 100%;
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+}
+
+.black-left {
+  align-content: center;
+  padding-right: 5vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  iframe {
+    width: 80%;
+    object-fit: cover;
+  }
+}
+
+.black-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  color: white;
+  width: 35vw;
+  height: 100%;
+  .icon-black-play {
+    margin-right: 10px;
+  }
+}
+
+.black-right-top {
+  color: white;
+  transition: 0.5s;
+}
+
+.black-right-top:hover {
+  transition: 0.5s;
+  color: chartreuse;
+}
+
+.black-right-bottom {
+  font-size: medium;
+  text-align: justify;
+}
+
+// Cards Style -------------------------------
+
+.cards-container {
+  background-color: #fafafa;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  border-bottom: #E5E6E4 solid 1px;
+  padding-bottom: 5vh;
+}
+
+.cards-top {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+.title-cards {
+  font-weight: normal;
+  font-size: x-large;
+  color: #401111;
+  height: 5vh;
+  margin-bottom: 2vh;
+}
+
+.voirplus-icon {
+  color: #8FCA3D;
+  margin-right: 10px;
+}
+
+.voirplus {
+  transition: 0.5s;
+}
+
+.voirplus:hover {
+  color: #8FCA3D;
+  transition: 0.5s;
+}
+
+.cards-bottom {
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+}
+
+.card-top {
+  height: 60%;
+  width: 100%;
+  justify-self: flex-start;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.card-middle {
+  font-weight: lighter;
+  text-align: justify;
+  padding: 10px;
+  font-size: medium;
+}
+
+.card-bottom {
+  color: #9D9999;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+}
+
+.date {
+  font-size: smaller;
+}
+
+.voirplus-icon {
+  transition: 0.5s;
+}
+
+.card-container:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  transform: scale(1.05);
+  .play {
+    color: #8FCA3D;
+    transition: 0.5s;
+  }
+}
+
+.table-ronde {
+  background-color: #F3F3F3 !important;
+}
+
+.end-page {
+  padding-bottom: 10vh;
+}

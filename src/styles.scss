@@ -1,0 +1,151 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; overflow-x: hidden; cursor: default; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* ScrollBar Style ---------- */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 transparent;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CDB9B9;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #C1A2A2;
+}
+
+// AUTRE
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+// Header Style
+
+.container-header {
+  width: 100vw;
+  height: 10vh;
+  padding: 10px 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+.icon-header {
+  color: #641717;
+  margin-right: 20px;
+  transition: 0.5s;
+}
+
+.icon-header:hover {
+  color: #B21A1A;
+  transition: 0.5s;
+}
+
+.logo-header {
+  img {
+    object-fit: cover;
+    height: 8vh;
+  }
+}
+
+// Sidenav -------------------------------
+
+.sidenav {
+  z-index: 1500 !important;
+  width: 20vw !important;
+}
+
+// Cursor
+
+.cursor{
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #641717;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 2000;
+  opacity: 0.7;
+  animation: cursor-animation 1s infinite;
+}
+
+@keyframes cursor-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cursor2{
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #401111;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.15s;
+  z-index: 2000;
+  opacity: 0.7;
+}
+
+.content:hover ~ .cursor{
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #B21A1A;
+  opacity: .5;
+}
+
+.content:hover ~ .cursor2{
+  opacity: 0;
+}
+
+.cursor-expand{
+  background-color: #B21A1A;
+  opacity: .3;
+  transition: 0.1s;
+}
+
+.cursor2-expand{
+  opacity: 0;
+  transition: 0.1s;
+}

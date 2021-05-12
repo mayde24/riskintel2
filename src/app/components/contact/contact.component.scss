@@ -1,0 +1,68 @@
+.all-window {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  button {
+    width: 20vw;
+  }
+}
+.contact-container {
+  width: 60vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-container {
+    margin-top: 2vh;
+  }
+}
+
+.info-other {
+  mat-form-field {
+    width: 100%;
+  }
+  textarea {
+    min-height: 30vh;
+    max-height: 30vh;
+  }
+  margin-bottom: 5vh;
+}
+
+.info-ligne {
+  mat-form-field {
+    width: 40%;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.back-img {
+  opacity: 0.2;
+  position: absolute;
+  object-fit: cover;
+  animation: move 100s infinite;
+}
+
+@media screen and (max-width: 1080px) {
+  .contact-container {
+    width: 80vw;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

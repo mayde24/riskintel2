@@ -1,0 +1,75 @@
+// Header Style
+
+.container-header {
+  width: 100vw;
+  height: 10vh;
+  padding: 10px 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+.icon-header {
+  color: #641717 !important;
+  margin-right: 20px;
+  transition: 0.5s;
+}
+
+.icon-header:hover {
+  color: #B21A1A !important;
+  transition: 0.5s;
+}
+
+.logo-header {
+  img {
+    object-fit: cover;
+    height: 8vh;
+  }
+}
+
+// Sidenav
+
+.sidenav {
+  width: 20vw;
+  z-index: 1500;
+}
+.sidenav-header {
+  height: 10vh;
+  padding: 10px 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pages, .pages2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: column;
+}
+
+.pages {
+  border-bottom: #E5E6E4 solid 1px;
+  border-top: #E5E6E4 solid 1px;
+}
+
+.page {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  transition: 0.5s;
+  padding-left: 35px;
+  font-weight: lighter;
+  font-size: large;
+}
+
+.page:hover {
+  background-color: #F3F3F3;
+  transition: 0.5s;
+}

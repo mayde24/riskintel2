@@ -1,0 +1,107 @@
+// Cards Style -------------------------------
+
+.cards-container {
+  background-color: #fafafa;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  border-bottom: #E5E6E4 solid 1px;
+  padding-bottom: 5vh;
+}
+
+.cards-top {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+.title-cards {
+  font-weight: normal;
+  font-size: x-large;
+  color: #401111;
+  height: 5vh;
+  margin-bottom: 5vh;
+}
+
+
+.cards-bottom {
+  width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+}
+
+.card-top {
+  height: 60%;
+  width: 100%;
+  justify-self: flex-start;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.card-middle {
+  font-weight: lighter;
+  text-align: justify;
+  padding: 10px;
+  font-size: medium;
+}
+
+.card-bottom {
+  color: #9D9999;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+}
+
+.date {
+  font-size: smaller;
+}
+
+.voirplus-icon {
+  transition: 0.5s;
+}
+
+.card-container:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  transform: scale(1.05);
+  .play {
+    color: #8FCA3D;
+    transition: 0.5s;
+  }
+}
+
+.end-page {
+  padding-bottom: 10vh;
+}
+
+.start-page {
+  padding-top: 10vh;
+}
