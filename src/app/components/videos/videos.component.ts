@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-videos',
+  templateUrl: './videos.component.html',
+  styleUrls: ['./videos.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class VideosComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     const cursor = document.querySelector('.cursor')!;
@@ -38,11 +37,6 @@ export class HomeComponent implements OnInit {
         cursor2.classList.remove("cursor2-expand");
       }, 500)
     })
-    window.scrollTo(0,0);
   }
 
-  goTo(nom: string) {
-    scroll(0,0);
-    this.router.navigate(['/' + nom]);
-  }
 }

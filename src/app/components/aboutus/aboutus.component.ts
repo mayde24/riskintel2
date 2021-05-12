@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-aboutus',
+  templateUrl: './aboutus.component.html',
+  styleUrls: ['./aboutus.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class AboutusComponent implements OnInit {
 
   constructor(public router: Router) { }
 
@@ -45,4 +45,5 @@ export class HomeComponent implements OnInit {
     scroll(0,0);
     this.router.navigate(['/' + nom]);
   }
+
 }

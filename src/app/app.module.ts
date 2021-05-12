@@ -8,7 +8,7 @@ import { InterviewsComponent } from './components/interviews/interviews.componen
 import { ExpertsComponent } from './components/experts/experts.component';
 import { TalkshowsComponent } from './components/talkshows/talkshows.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,6 +24,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
 import {MatSelectModule} from "@angular/material/select";
 import {AngularFireModule} from "@angular/fire";
+import { VideoComponent } from './components/video/video.component';
+import { VideosComponent } from './components/videos/videos.component';
+import { ActualitesComponent } from './components/actualites/actualites.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import {AngularFireModule} from "@angular/fire";
     ContactComponent,
     AboutusComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    VideoComponent,
+    VideosComponent,
+    ActualitesComponent
   ],
   imports: [
     BrowserModule,

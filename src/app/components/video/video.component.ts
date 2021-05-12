@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-video',
+  templateUrl: './video.component.html',
+  styleUrls: ['./video.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class VideoComponent implements OnInit {
 
   constructor(public router: Router) { }
 
   ngOnInit(): void {
+    window.scrollTo(0,0);
     const cursor = document.querySelector('.cursor')!;
 
     document.addEventListener('mousemove', e => {
@@ -38,7 +39,6 @@ export class HomeComponent implements OnInit {
         cursor2.classList.remove("cursor2-expand");
       }, 500)
     })
-    window.scrollTo(0,0);
   }
 
   goTo(nom: string) {

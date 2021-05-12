@@ -5,7 +5,7 @@
   height: 10vh;
   padding: 10px 35px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background-color: white;
@@ -20,6 +20,13 @@
   transition: 0.5s;
 }
 
+.header-left {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
 .icon-header:hover {
   color: #B21A1A !important;
   transition: 0.5s;
@@ -32,11 +39,35 @@
   }
 }
 
+.actu-header {
+  padding: 20px;
+  transition: 0.5s;
+  font-weight: lighter;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.actu-header2 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  transition: 0.5s;
+  padding-right: 35px;
+  font-weight: lighter;
+  font-size: large;
+}
+
+.actu-header:hover {
+  background-color: #F3F3F3;
+  transition: 0.5s;
+}
+
 // Sidenav
 
 .sidenav {
   width: 20vw;
   z-index: 1500;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .sidenav-header {
   height: 10vh;
@@ -71,5 +102,156 @@
 
 .page:hover {
   background-color: #F3F3F3;
+  transition: 0.5s;
+}
+
+// Cards Style -------------------------------
+
+.title-cards {
+  font-weight: normal;
+  font-size: x-large;
+  color: #401111;
+  height: 5vh;
+  margin-bottom: 2vh;
+}
+
+.cards-bottom {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+  border-top: #E5E6E4 solid 1px;
+  padding: 35px;
+  padding-top: 3vh;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+}
+
+.card-top {
+  height: 60%;
+  width: 100%;
+  justify-self: flex-start;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.card-middle {
+  font-weight: lighter;
+  text-align: justify;
+  padding: 10px;
+  font-size: small;
+}
+
+.card-bottom {
+  color: #9D9999;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+}
+
+.date {
+  font-size: smaller;
+}
+
+
+.play {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
+  .type {
+    padding-right: 10px;
+  }
+}
+
+.card-container:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  transform: scale(1.05);
+  .play {
+    color: #3DA4CA;
+    transition: 0.5s;
+  }
+  .type {
+    color: #3DA4CA;
+    transition: 0.5s;
+  }
+}
+
+.table-ronde {
+  background-color: #F3F3F3 !important;
+}
+
+.end-page {
+  padding-bottom: 10vh;
+}
+
+// Sidenav2
+
+.sidenav2 {
+  background-color: #fafafa;
+  width: 35vw;
+  z-index: 1500;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.sidenav-header2-container {
+  height: 10vh;
+  padding: 10px 35px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidenav-header2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.mat-drawer.mat-drawer-side {
+  z-index: 1500 !important;
+}
+
+.voirplus-icon {
+  color: #3DA4CA;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.voirplus {
+  width: 40%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.voirplus:hover {
+  color: #3DA4CA;
   transition: 0.5s;
 }

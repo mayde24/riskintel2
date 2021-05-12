@@ -10,6 +10,7 @@ export class InterviewsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo(0,0);
     const cursor = document.querySelector('.cursor')!;
 
     document.addEventListener('mousemove', e => {

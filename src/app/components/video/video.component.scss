@@ -10,7 +10,7 @@
   background-color: black;
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   width: 100vw;
-  height: 50vh;
+  height: 80vh;
   margin: 0 auto;
   margin-top: 10vh;
 }
@@ -34,7 +34,7 @@
   justify-content: flex-start;
   align-content: center;
   iframe {
-    width: 80%;
+    width: 90%;
     object-fit: cover;
   }
 }
@@ -52,19 +52,47 @@
   }
 }
 
-.black-right-top {
-  color: white;
+.icon-blanche {
+  width: 50px;
+  object-fit: cover;
+  animation: circle-swing 1s infinite;
   transition: 0.5s;
 }
 
-.black-right-top:hover {
+@keyframes circle-swing {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.black-right-top {
+  color: white;
   transition: 0.5s;
-  color: chartreuse;
+  font-weight: bold;
+  font-size: x-large;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: right;
+  line-height: 3vh;
 }
 
 .black-right-bottom {
   font-size: medium;
   text-align: justify;
+  font-weight: lighter;
 }
 
 // Cards Style -------------------------------
@@ -101,7 +129,6 @@
 .voirplus-icon {
   color: #8FCA3D;
   margin-right: 10px;
-  transition: 0.5s;
 }
 
 .voirplus {
@@ -165,6 +192,10 @@
 
 .date {
   font-size: smaller;
+}
+
+.voirplus-icon {
+  transition: 0.5s;
 }
 
 .card-container:hover {

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~material-design-icons/iconfont/material-icons.css";
 
 html, body { height: 100%; overflow-x: hidden; cursor: default; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -41,6 +42,10 @@ a:hover {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
+}
+
+svg:not(:root).svg-inline--fa {
+  align-self: center !important;
 }
 
 // Header Style
