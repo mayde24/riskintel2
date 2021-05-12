@@ -52,7 +52,7 @@
 }
 
 .card-top {
-  height: 60%;
+  height: 75%;
   width: 100%;
   justify-self: flex-start;
   img {
@@ -65,8 +65,7 @@
 }
 
 .card-middle {
-  font-weight: lighter;
-  text-align: justify;
+  font-weight: normal;
   padding: 10px;
   font-size: medium;
 }
@@ -101,11 +100,11 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   transform: scale(1.05);
   .play {
-    color: #8FCA3D;
+    color: #006074;
     transition: 0.5s;
   }
   .type {
-    color: #8FCA3D;
+    color: #006074;
     transition: 0.5s;
   }
 }

@@ -40,25 +40,52 @@
 }
 
 .actu-header {
-  padding: 20px;
-  transition: 0.5s;
+  padding: 15px;
+  transition: 1s;
   font-weight: lighter;
   font-size: large;
   border-radius: 5px;
+  animation: urgent 1.5s infinite;
 }
 
-.actu-header2 {
-  padding-bottom: 20px;
-  padding-top: 20px;
-  transition: 0.5s;
-  padding-right: 35px;
-  font-weight: lighter;
-  font-size: large;
+@keyframes urgent {
+  0% {
+    background-color: transparent;
+  }
+  45% {
+    background-color: #F8ECEC;
+  }
+  55% {
+    background-color: #F8ECEC;
+  }
+  100% {
+    background-color: transparent;
+  }
 }
 
 .actu-header:hover {
   background-color: #F3F3F3;
   transition: 0.5s;
+  animation: urgent2 1s infinite;
+}
+
+@keyframes urgent2 {
+  0% {
+    color: black;
+    background-color: transparent;
+  }
+  45% {
+    color: #401111;
+    background-color: #DAB8B8;
+  }
+  55% {
+    color: #401111;
+    background-color: #DAB8B8;
+  }
+  100% {
+    color: black;
+    background-color: transparent;
+  }
 }
 
 // Sidenav
@@ -119,8 +146,8 @@
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 35px;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
   border-top: #E5E6E4 solid 1px;
   padding: 35px;
   padding-top: 3vh;
@@ -131,20 +158,18 @@
   justify-content: space-between;
   align-content: space-between;
   flex-direction: column;
-  height: 100%;
   background-color: white;
   transition: 0.5s;
   z-index: 100;
   border-radius: 10px;
-  margin-bottom: 5vh;
+  margin-bottom: 15px;
 }
 
 .card-top {
-  height: 60%;
   width: 100%;
   justify-self: flex-start;
   img {
-    height: 100%;
+    height: 10vh;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -153,8 +178,7 @@
 }
 
 .card-middle {
-  font-weight: lighter;
-  text-align: justify;
+  font-weight: normal;
   padding: 10px;
   font-size: small;
 }
@@ -166,6 +190,8 @@
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
 }
 
 .date {
@@ -188,11 +214,11 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   transform: scale(1.05);
   .play {
-    color: #3DA4CA;
+    color: #006074;
     transition: 0.5s;
   }
   .type {
-    color: #3DA4CA;
+    color: #006074;
     transition: 0.5s;
   }
 }
@@ -208,11 +234,9 @@
 // Sidenav2
 
 .sidenav2 {
-  background-color: #fafafa;
-  width: 35vw;
+  width: 20vw;
+  background-color: #f5f5f5;
   z-index: 1500;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .sidenav-header2-container {
@@ -222,6 +246,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
 
 .sidenav-header2 {
@@ -238,20 +263,22 @@
 }
 
 .voirplus-icon {
-  color: #3DA4CA;
+  color: #006074;
   margin-right: 10px;
   transition: 0.5s;
 }
 
 .voirplus {
-  width: 40%;
+  width: 60%;
   transition: 0.5s;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #9AAFB2;
+  font-weight: bold;
 }
 
 .voirplus:hover {
-  color: #3DA4CA;
+  color: #006074;
   transition: 0.5s;
 }

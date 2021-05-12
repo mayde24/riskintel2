@@ -1,33 +1,33 @@
 <div class="container-header">
  <div class="header-left">
-   <div class="menu-header" (click)="sidenav.toggle()">
+   <div class="menu-header" (click)="sidenav.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
      <mat-sidenav-container class="example-container">
        <mat-sidenav-content>
          <i class="fas fa-2x fa-bars icon-header"></i>
        </mat-sidenav-content>
      </mat-sidenav-container>
    </div>
-   <div class="logo-header" (click)="goTo('home')">
+   <div class="logo-header" (click)="goTo('home')" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
      <img src="../../../assets/img/logo-risk.jpg" alt="">
    </div>
  </div>
-  <div class="actu-header" (click)="sidenav2.toggle()">
-    Dernières actualités
+  <div class="actu-header" (click)="sidenav2.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+    Dernières actualités des risques
   </div>
 </div>
 
 <!-- SIDENAV 1 -------------------------------------------->
-<mat-sidenav #sidenav mode="side" class="sidenav">
+<mat-sidenav #sidenav mode="over" class="sidenav">
   <div class="sidenav-header">
-    <div class="menu-header" (click)="sidenav.toggle()">
+    <div class="menu-header" (click)="sidenav.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <i class="fas fa-2x fa-chevron-left icon-header"></i>
     </div>
-    <div class="logo-header" (click)="goTo('home')">
+    <div class="logo-header" (click)="goTo('home')" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <img src="../../../assets/img/logo-risk.jpg" alt="">
     </div>
   </div>
-  <div class="pages">
-    <div class="page" (click)="goTo('interviews')">
+  <div class="pages" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+    <div class="page" (click)="goTo('interviews')" >
       Interviews
     </div>
     <div class="page" (click)="goTo('experts')">
@@ -37,7 +37,7 @@
       Talk Show
     </div>
   </div>
-  <div class="pages2">
+  <div class="pages2" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
     <div class="page" (click)="goTo('actualites')">
       Actualités
     </div>
@@ -47,22 +47,53 @@
   </div>
 </mat-sidenav>
 
-<!-- SIDENAV 1 -------------------------------------------->
-<mat-sidenav #sidenav2 mode="side" class="sidenav2" position="end">
+<!-- SIDENAV 2 -------------------------------------------->
+<mat-sidenav #sidenav2 mode="over" class="sidenav2" position="end">
   <div class="sidenav-header2-container">
-    <div class="voirplus" (click)="goTo('actualites')">
+    <div class="voirplus" (click)="goTo('actualites')" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <i class="fas fa-eye voirplus-icon"></i> Voir plus
     </div>
     <div class="sidenav-header2">
-      <div class="actu-header2">
-        Dernières actualités
-      </div>
-      <div class="menu-header" (click)="sidenav2.toggle()">
+      <div class="menu-header" (click)="sidenav2.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
         <i class="fas fa-2x fa-chevron-right icon-header"></i>
       </div>
     </div>
   </div>
   <div class="cards-bottom">
+    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+      <div class="card-top">
+        <img src="https://images.bfmtv.com/Rm8f-IRCrvfgthMP_508bTJg7QU=/0x105:2048x1257/1600x0/images/Des-gendarmes-aux-Plantiers-le-12-mai-2021-1025361.jpg"/>
+      </div>
+      <div class="card-middle">
+        Double meurtre dans les Cévennes : La gendarmerie n'exclut pas l'hypothèse du suicide.
+      </div>
+      <div class="card-bottom">
+        <div class="date">
+          Le 12/04/2021
+        </div>
+        <div class="play">
+          <div class="type">BFMTV</div>
+          <i class="fas fa-eye"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card-top">
+        <img src="https://images.bfmtv.com/Rm8f-IRCrvfgthMP_508bTJg7QU=/0x105:2048x1257/1600x0/images/Des-gendarmes-aux-Plantiers-le-12-mai-2021-1025361.jpg"/>
+      </div>
+      <div class="card-middle">
+        Double meurtre dans les Cévennes : La gendarmerie n'exclut pas l'hypothèse du suicide.
+      </div>
+      <div class="card-bottom">
+        <div class="date">
+          Le 12/04/2021
+        </div>
+        <div class="play">
+          <div class="type">BFMTV</div>
+          <i class="fas fa-eye"></i>
+        </div>
+      </div>
+    </div>
     <div class="card-container">
       <div class="card-top">
         <img src="https://images.bfmtv.com/Rm8f-IRCrvfgthMP_508bTJg7QU=/0x105:2048x1257/1600x0/images/Des-gendarmes-aux-Plantiers-le-12-mai-2021-1025361.jpg"/>

@@ -5,7 +5,7 @@
 <div class="black-banner content">
   <div class="black-container">
     <div class="black-left">
-      <img src="../../../assets/img/risk-logo.png" alt="">
+      <video src="assets/img/video2.mp4" autoplay [muted]="1"></video>
     </div>
     <div class="black-right">
       <div class="black-right-top" (click)="goTo('videos')">
@@ -20,7 +20,7 @@
 
 <!-- DESCRPTION ----------------------------------------->
 
-<div class="description-container">
+<div class="description-container start-page">
   <div class="description-trio">
     <div class="trio">
       <div class="icon-trio">
@@ -66,7 +66,7 @@
     Nos Partenaires
   </div>
   <div class="partners">
-    <div class="partner">
+    <div class="partner" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <img src="../../../assets/img/partner3.png" alt="">
     </div>
     <div class="partner">

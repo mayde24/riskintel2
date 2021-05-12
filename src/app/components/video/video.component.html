@@ -9,7 +9,8 @@
     </div>
     <div class="black-right">
       <div class="black-right-top">
-        <img src="assets/img/icone-blanche.png" class="icon-blanche" alt="">Droit numérique, RGPD, cybersécurité risques et opportunités ?
+        Droit numérique, RGPD, cybersécurité risques et opportunités ?
+        <img src="assets/img/icone-blanche.png" class="icon-blanche" alt="">
       </div>
       <div class="black-right-bottom">
         Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description. Ceci est une description.
@@ -20,17 +21,17 @@
 
 <!-- SIMILAIRE ------------------------------------ -->
 
-<div class="cards-container">
+<div class="cards-container start-page">
   <div class="cards-top">
     <div class="title-cards">
       Contenus similaires
     </div>
-    <div class="voirplus">
+    <div class="voirplus" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <i class="fas fa-play-circle voirplus-icon"></i> Voir plus
     </div>
   </div>
   <div class="cards-bottom">
-    <div class="card-container">
+    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <div class="card-top">
         <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
       </div>
@@ -89,12 +90,12 @@
     <div class="title-cards">
       Nos dernières émissions
     </div>
-    <div class="voirplus" (click)="goTo('videos')">
+    <div class="voirplus" (click)="goTo('videos')" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <i class="fas fa-play-circle voirplus-icon"></i> Voir plus
     </div>
   </div>
   <div class="cards-bottom">
-    <div class="card-container">
+    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <div class="card-top">
         <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
       </div>

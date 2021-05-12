@@ -33,10 +33,9 @@
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  img {
-    height: 50%;
+  video {
+    width: 80%;
     object-fit: cover;
-    align-self: center;
   }
 }
 
@@ -56,15 +55,13 @@
 .black-right-top {
   color: white;
   transition: 0.5s;
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
   line-height: 3.5vh;
-  text-align: justify;
 }
 
 .black-right-bottom {
-  font-size: medium;
-  text-align: justify;
+  font-size: small;
 }
 
 // DESCRIPTION ------------------------------------------
@@ -178,4 +175,8 @@
 
 .end-page {
   padding-bottom: 10vh;
+}
+
+.start-page {
+  padding-top: 7vh;
 }
