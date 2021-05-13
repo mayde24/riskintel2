@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'video', component: VideoComponent },
   { path: 'videos', component: VideosComponent },
   { path: 'actualites', component: ActualitesComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', component: HomeComponent }
 ];
 
