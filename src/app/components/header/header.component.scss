@@ -53,10 +53,10 @@
     background-color: transparent;
   }
   45% {
-    background-color: #F8ECEC;
+    background-color: #E1CACA;
   }
   55% {
-    background-color: #F8ECEC;
+    background-color: #E1CACA;
   }
   100% {
     background-color: transparent;
@@ -76,11 +76,11 @@
   }
   45% {
     color: #401111;
-    background-color: #DAB8B8;
+    background-color: #BB9999;
   }
   55% {
     color: #401111;
-    background-color: #DAB8B8;
+    background-color: #BB9999;
   }
   100% {
     color: black;
@@ -281,4 +281,12 @@
 .voirplus:hover {
   color: #006074;
   transition: 0.5s;
+}
+
+// EXCLAMATION
+
+.exclamation {
+  color: #641717;
+  margin-right: 10px;
+  animation: turn 1s infinite;
 }
