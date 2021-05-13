@@ -12,7 +12,7 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 0 15px rgba(0,0,0,0.7);
-  background-color: black;
+  background-color: white;
 }
 .icon-header {
   color: #641717 !important;
@@ -46,7 +46,6 @@
   font-size: large;
   border-radius: 5px;
   animation: urgent 1.5s infinite;
-  color: white;
 }
 
 @keyframes urgent {
@@ -54,10 +53,10 @@
     background-color: transparent;
   }
   45% {
-    background-color: #641717;
+    background-color: #D4AEAE;
   }
   55% {
-    background-color: #641717;
+    background-color: #D4AEAE;
   }
   100% {
     background-color: transparent;
@@ -67,7 +66,7 @@
 .actu-header:hover {
   background-color: #F3F3F3;
   transition: 0.5s;
-  animation: urgent 0.8s infinite;
+  animation: urgent2 0.8s infinite;
 }
 
 @keyframes urgent2 {
@@ -104,7 +103,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  background-color: #131313;
+  background-color: white;
 }
 
 .pages, .pages2 {
@@ -248,7 +247,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #131313;
+  background-color: white;
 }
 
 .sidenav-header2 {
@@ -288,7 +287,7 @@
 // EXCLAMATION
 
 .exclamation {
-  color: white;
+  color: #641717;
   margin-right: 10px;
   animation: turn 1s infinite;
 }
