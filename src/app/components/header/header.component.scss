@@ -8,11 +8,11 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: white;
   position: fixed;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  background-color: black;
 }
 .icon-header {
   color: #641717 !important;
@@ -46,6 +46,7 @@
   font-size: large;
   border-radius: 5px;
   animation: urgent 1.5s infinite;
+  color: white;
 }
 
 @keyframes urgent {
@@ -53,10 +54,10 @@
     background-color: transparent;
   }
   45% {
-    background-color: #E1CACA;
+    background-color: #641717;
   }
   55% {
-    background-color: #E1CACA;
+    background-color: #641717;
   }
   100% {
     background-color: transparent;
@@ -66,7 +67,7 @@
 .actu-header:hover {
   background-color: #F3F3F3;
   transition: 0.5s;
-  animation: urgent2 1s infinite;
+  animation: urgent 0.8s infinite;
 }
 
 @keyframes urgent2 {
@@ -103,6 +104,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  background-color: #131313;
 }
 
 .pages, .pages2 {
@@ -234,7 +236,7 @@
 // Sidenav2
 
 .sidenav2 {
-  width: 20vw;
+  width: 23vw;
   background-color: #f5f5f5;
   z-index: 1500;
 }
@@ -246,7 +248,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #131313;
 }
 
 .sidenav-header2 {
@@ -286,7 +288,11 @@
 // EXCLAMATION
 
 .exclamation {
-  color: #641717;
+  color: white;
   margin-right: 10px;
   animation: turn 1s infinite;
+}
+
+.mat-drawer-container {
+  background-color: transparent !important;
 }
