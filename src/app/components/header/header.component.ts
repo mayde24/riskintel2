@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -12,10 +12,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0,0);
+    this.router.events.subscribe(evt => {
+      if (evt instanceof NavigationEnd) {
+        document.body.scrollTop = 0; // scroll top to body element
+      }
+    });
   }
 
   goTo(nom: string) {
-    scroll(0,0);
     this.router.navigate(['/' + nom]);
   }
 

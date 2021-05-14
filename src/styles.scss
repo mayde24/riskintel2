@@ -6,6 +6,7 @@ html, body {
   overflow-x: hidden;
   cursor: none;
   font-family: 'Open Sans', sans-serif !important;
+  background-color: #fafafa;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -163,6 +164,7 @@ svg:not(:root).svg-inline--fa {
   width: 50px;
   height: 50px;
   transition: 0.1s;
+  border: 1.5px solid #D30013;
   animation: size-cursor 1s;
   transform: translate(-25%, -25%);
 }
@@ -188,4 +190,48 @@ svg:not(:root).svg-inline--fa {
 .cursor2-hover {
   opacity: 0;
   transition: 0.1s;
+}
+
+// ANGULAR MATERIAL THEME ------------------------------
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$panties-primary: mat-palette($mat-brown);
+$panties-accent: mat-palette($mat-blue);
+
+// The warn palette is optional (defaults to red).
+$panties-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$panties-theme: mat-light-theme($panties-primary, $panties-accent, $panties-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($panties-theme);
+
+
+// SURLIGNEMENT
+
+::selection {
+  color: #fff;
+  background: #874C4C;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #874C4C;
 }

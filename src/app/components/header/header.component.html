@@ -1,24 +1,24 @@
 <div class="container-header">
  <div class="header-left">
-   <div class="menu-header" (click)="sidenav.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
-     <mat-sidenav-container class="example-container">
-       <mat-sidenav-content>
+   <div class="menu-header" (click)="sidenav2.close(); sidenav.toggle();" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+     <mat-drawer-container class="example-container" [hasBackdrop]="true" (backdropClick)="sidenav.toggle();">
+       <mat-drawer-content>
          <i class="fas fa-2x fa-bars icon-header"></i>
-       </mat-sidenav-content>
-     </mat-sidenav-container>
+       </mat-drawer-content>
+     </mat-drawer-container>
    </div>
    <div class="logo-header" (click)="goTo('home')" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
      <img src="../../../assets/img/logo-risk.png" alt="">
    </div>
  </div>
-  <div class="actu-header" (click)="sidenav2.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+  <div class="actu-header" (click)="sidenav2.toggle(); sidenav.close()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
     <i class="fas fa-exclamation-circle exclamation"></i>
     Dernières actualités des risques
   </div>
 </div>
 
 <!-- SIDENAV 1 -------------------------------------------->
-<mat-sidenav #sidenav mode="over" class="sidenav">
+<mat-drawer #sidenav mode="over" class="sidenav table-ronde">
   <div class="sidenav-header">
     <div class="menu-header" (click)="sidenav.toggle()" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
       <i class="fas fa-2x fa-chevron-left icon-header"></i>
@@ -45,8 +45,11 @@
     <div class="page" (click)="goTo('about-us')">
       A propos de nous
     </div>
+    <div class="page" (click)="goTo('contact')">
+      Partenariat
+    </div>
   </div>
-</mat-sidenav>
+</mat-drawer>
 
 <!-- SIDENAV 2 -------------------------------------------->
 <mat-sidenav #sidenav2 mode="over" class="sidenav2" position="end">

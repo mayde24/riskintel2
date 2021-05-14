@@ -1,8 +1,8 @@
-import {Intervenant} from "./Intervenant";
+import {Intervenant} from './Intervenant';
 
 export class Video {
 
-  _id: number
+  _id: number;
   _code: string;
   _titre: string;
   _description: string;
@@ -11,6 +11,7 @@ export class Video {
   _photo: string;
   _type: string;
 
+  // tslint:disable-next-line:max-line-length
   constructor(id: number, code: string, titre: string, description: string, date: string, intervenants: Intervenant[], photo: string, type: string) {
     this._id = id;
     this._code = code;

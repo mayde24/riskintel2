@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
   background-color: white;
 }
 .icon-header {
@@ -103,7 +103,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  background-color: white;
+  background-color: #fafafa;
 }
 
 .pages, .pages2 {
@@ -129,7 +129,7 @@
 }
 
 .page:hover {
-  background-color: #F3F3F3;
+  background-color: #EAEAEA;
   transition: 0.5s;
 }
 

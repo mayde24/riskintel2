@@ -13,7 +13,7 @@ export class SujetService {
   sujetSubject = new Subject<Sujet[]>();
 
   constructor() {
-    this.getAll()
+    this.getAll();
   }
 
   emit() {

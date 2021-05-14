@@ -1,10 +1,10 @@
 export class Contact {
 
   _id: number;
-  _nom: string
+  _nom: string;
   _prenom: string;
   _email: string;
-  _sujet: string
+  _sujet: string;
   _message: string;
 
   constructor(id: number, nom: string, prenom: string, email: string, sujet: string, message: string) {

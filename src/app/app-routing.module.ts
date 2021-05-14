@@ -9,6 +9,7 @@ import {ExpertsComponent} from "./components/experts/experts.component";
 import {VideoComponent} from "./components/video/video.component";
 import {VideosComponent} from "./components/videos/videos.component";
 import {ActualitesComponent} from "./components/actualites/actualites.component";
+import {IntervenantComponent} from "./components/intervenant/intervenant.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'videos', component: VideosComponent },
   { path: 'actualites', component: ActualitesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'intervenant', component: IntervenantComponent },
   { path: '**', component: HomeComponent }
 ];
 

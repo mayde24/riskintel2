@@ -27,6 +27,7 @@ import {AngularFireModule} from "@angular/fire";
 import { VideoComponent } from './components/video/video.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { ActualitesComponent } from './components/actualites/actualites.component';
+import { IntervenantComponent } from './components/intervenant/intervenant.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ActualitesComponent } from './components/actualites/actualites.componen
     FooterComponent,
     VideoComponent,
     VideosComponent,
-    ActualitesComponent
+    ActualitesComponent,
+    IntervenantComponent
   ],
   imports: [
     BrowserModule,

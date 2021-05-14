@@ -40,11 +40,8 @@ export class ContactComponent implements OnInit {
       sujet: ["", Validators.required],
       message: ["", Validators.required],
     });
-  }
 
-  onSubmit() {
-    this.contactService.create(new Contact(this.contactService.getNewId(), this.form.value.nom, this.form.value.prenom, this.form.value.email, this.form.value.sujet, this.form.value.message))
-
+    window.scrollTo(0,0);
     const cursor = document.querySelector('.cursor')!;
 
     document.addEventListener('mousemove', e => {
@@ -72,5 +69,25 @@ export class ContactComponent implements OnInit {
         cursor2.classList.remove("cursor2-expand");
       }, 500)
     })
+    cursor.classList.remove("cursor-hover");
+    cursor2.classList.remove("cursor2-hover");
+  }
+
+  onSubmit() {
+    this.contactService.create(new Contact(this.contactService.getNewId(), this.form.value.nom, this.form.value.prenom, this.form.value.email, this.form.value.sujet, this.form.value.message));
+  }
+
+  hoverOn() {
+    const cursor = document.querySelector('.cursor')!;
+    const cursor2 = document.querySelector('.cursor2')!;
+    cursor.classList.add("cursor-hover");
+    cursor2.classList.add("cursor2-expand");
+  }
+
+  hoverOff() {
+    const cursor = document.querySelector('.cursor')!;
+    const cursor2 = document.querySelector('.cursor2')!;
+    cursor.classList.remove("cursor-hover");
+    cursor2.classList.remove("cursor2-expand");
   }
 }
