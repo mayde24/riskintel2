@@ -13,26 +13,14 @@ import {Sujet} from "../../classes/Sujet";
 })
 export class ContactComponent implements OnInit {
 
-  sujets!: Array<Sujet>;
-  sujetSubscription!: Subscription;
-  largeur!: number;
-
   form!: FormGroup;
 
 
   constructor(public contactService: ContactService,
-              public sujetService: SujetService,
               private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     window.scrollTo(0,0);
-    this.largeur = window.innerWidth;
-    this.sujets = [];
-    this.sujetSubscription = this.sujetService.sujetSubject.subscribe(
-      (sujets: Array<Sujet>) => {
-        this.sujets = sujets;
-      }
-    );
     this.form = this.formBuilder.group({
       nom: ["", Validators.required],
       prenom: ["", Validators.required],

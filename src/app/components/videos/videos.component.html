@@ -10,244 +10,41 @@
     </div>
   </div>
   <div class="cards-bottom">
-    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
+<!--    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" *ngFor="let video of videos;">-->
+<!--      <div class="card-top">-->
+<!--        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>-->
+<!--      </div>-->
+<!--      <div class="card-middle">-->
+<!--        Droit numérique, RGPD, cybersécurité risques et opportunités ?-->
+<!--      </div>-->
+<!--      <div class="card-bottom">-->
+<!--        <div class="date">-->
+<!--          Le 25/04/2021-->
+<!--        </div>-->
+<!--        <div class="play">-->
+<!--          <div class="type">Interview RISKINTEL</div>-->
+<!--          <div><i class="fas fa-play"></i></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+      <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" *ngFor="let video of videos;" (click)="goToVideo(video.id);">
+        <div class="card-top">
+          <img src="{{video.photo}}"/>
         </div>
-        <div class="play">
-          <div class="type">Interview RISKINTEL</div>
-          <div><i class="fas fa-play"></i></div>
+        <div class="card-middle">
+          {{video.titre}}
         </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Table Ronde des Experts</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Interview RISKINTEL</div>
-          <div><i class="fas fa-play"></i></div>
+        <div class="card-bottom">
+          <div class="date">
+            {{video.date}}
+          </div>
+          <div class="play">
+            <div class="type">{{video.type}}</div>
+            <div><i class="fas fa-play"></i></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Table Ronde des Experts</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Talk Show : CyberTalk</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Interview RISKINTEL</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Talk Show : CyberTalk</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Table Ronde des Experts</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Interview RISKINTEL</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Interview RISKINTEL</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Talk Show : CyberTalk</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Table Ronde des Experts</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Interview RISKINTEL</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <div class="type">Talk Show : CyberTalk</div>
-          <div><i class="fas fa-play"></i></div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Subscription} from "rxjs";
+import {VideoService} from "../../services/video.service";
+import {Router} from "@angular/router";
+import {Video} from "../../classes/Video";
 
 @Component({
   selector: 'app-experts',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpertsComponent implements OnInit {
 
-  constructor() { }
+  videos: Array<any> = [];
+  // @ts-ignore
+  videoSubscription: Subscription;
+
+  constructor(public videoService: VideoService,
+              public router: Router) { }
 
   ngOnInit(): void {
+    // LISTE DES VIDEOS CHARGEES ICI ================================
+    this.videos = [];
+    this.videoSubscription = this.videoService.videoSubject.subscribe(
+      (videos: Array<Video>) => {
+        this.videos = [];
+        for (let video of videos) {
+          if (video.type == "Table Ronde Des Experts") this.videos.push(video);
+        }
+      }
+    );
+    this.videoService.getAll();
+    // ==============================================================
     window.scrollTo(0,0);
     const cursor = document.querySelector('.cursor')!;
 
@@ -40,6 +61,10 @@ export class ExpertsComponent implements OnInit {
     })
     cursor.classList.remove("cursor-hover");
     cursor2.classList.remove("cursor2-hover");
+  }
+
+  goToVideo(id: number) {
+    this.router.navigate(['/video', id])
   }
 
   hoverOn() {

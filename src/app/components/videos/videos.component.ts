@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Video} from '../../classes/Video';
+import {Observable, Subscription} from 'rxjs';
+import {VideoService} from '../../services/video.service';
+import {map} from "rxjs/operators";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-videos',
@@ -7,38 +12,59 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideosComponent implements OnInit {
 
-  constructor() { }
+  videos: Array<any> = [];
+  // @ts-ignore
+  videoSubscription: Subscription;
+
+  constructor(public videoService: VideoService,
+              public router: Router) { }
 
   ngOnInit(): void {
+    // LISTE DES VIDEOS CHARGEES ICI ================================
+    this.videos = [];
+    this.videoSubscription = this.videoService.videoSubject.subscribe(
+      (videos: Array<Video>) => {
+        this.videos = [];
+        for (let video of videos) {
+          this.videos.push(video);
+        }
+      }
+    );
+    this.videoService.getAll();
+    // ==============================================================
     const cursor = document.querySelector('.cursor')!;
 
     document.addEventListener('mousemove', e => {
-      cursor.setAttribute("style", "top: "+(e.pageY - 15)+"px; left: "+(e.pageX - 15)+"px;")
-    })
+      cursor.setAttribute("style", "top: "+(e.pageY - 15)+"px; left: "+(e.pageX - 15)+"px;");
+    });
 
     document.addEventListener('click', () => {
       cursor.classList.add("cursor-expand");
 
       setTimeout(() => {
         cursor.classList.remove("cursor-expand");
-      }, 500)
-    })
+      }, 500);
+    });
 
     const cursor2 = document.querySelector('.cursor2')!;
 
     document.addEventListener('mousemove', e => {
-      cursor2.setAttribute("style", "top: "+(e.pageY)+"px; left: "+(e.pageX)+"px;")
-    })
+      cursor2.setAttribute("style", "top: "+(e.pageY)+"px; left: "+(e.pageX)+"px;");
+    });
 
     document.addEventListener('click', () => {
       cursor2.classList.add("cursor2-expand");
 
       setTimeout(() => {
         cursor2.classList.remove("cursor2-expand");
-      }, 500)
-    })
+      }, 500);
+    });
     cursor.classList.remove("cursor-hover");
     cursor2.classList.remove("cursor2-hover");
+  }
+
+  goToVideo(id: number) {
+    this.router.navigate(['/video', id])
   }
 
   hoverOn() {

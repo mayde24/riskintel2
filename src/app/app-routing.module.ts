@@ -17,11 +17,11 @@ const routes: Routes = [
   { path: 'talk-shows', component: TalkshowsComponent },
   { path: 'about-us', component: AboutusComponent },
   { path: 'experts', component: ExpertsComponent },
-  { path: 'video', component: VideoComponent },
+  { path: 'intervenant/:id', component: IntervenantComponent },
+  { path: 'video/:id', component: VideoComponent },
   { path: 'videos', component: VideosComponent },
   { path: 'actualites', component: ActualitesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'intervenant', component: IntervenantComponent },
   { path: '**', component: HomeComponent }
 ];
 

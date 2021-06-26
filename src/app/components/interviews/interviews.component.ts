@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Subscription} from "rxjs";
+import {VideoService} from "../../services/video.service";
+import {Router} from "@angular/router";
+import {Video} from "../../classes/Video";
 
 @Component({
   selector: 'app-interviews',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterviewsComponent implements OnInit {
 
-  constructor() { }
+  videos: Array<any> = [];
+  // @ts-ignore
+  videoSubscription: Subscription;
+
+  constructor(public videoService: VideoService,
+              public router: Router) { }
 
   ngOnInit(): void {
+    // LISTE DES VIDEOS CHARGEES ICI ================================
+    this.videos = [];
+    this.videoSubscription = this.videoService.videoSubject.subscribe(
+      (videos: Array<Video>) => {
+        this.videos = [];
+        for (let video of videos) {
+          console.log(video.type);
+          if (video.type == "Interview RISKINTEL") this.videos.push(video);
+        }
+      }
+    );
+    this.videoService.getAll();
+    // ==============================================================
     window.scrollTo(0,0);
     const cursor = document.querySelector('.cursor')!;
 
@@ -40,6 +62,10 @@ export class InterviewsComponent implements OnInit {
     })
     cursor.classList.remove("cursor-hover");
     cursor2.classList.remove("cursor2-hover");
+  }
+
+  goToVideo(id: number) {
+    this.router.navigate(['/video', id])
   }
 
   hoverOn() {

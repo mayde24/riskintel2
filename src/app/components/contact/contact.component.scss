@@ -1,5 +1,30 @@
+
+// BANNER BLACK+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.banner {
+  background-color: black;
+  z-index: 1000;
+  width: 100vw;
+  height: 10vh;
+  margin-top: 10vh;
+  color: white;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+  .text {
+    padding-top: 2vh;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+  }
+  .sub-text {
+    width: 100%;
+    font-size: medium;
+  }
+}
+
 .all-window {
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -13,9 +38,9 @@
 .contact-container {
   width: 60vw;
   margin: 0 auto;
-  margin-top: 10vh;
   overflow: hidden;
   position: relative;
+  margin-top: 10vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -29,8 +54,8 @@
     width: 100%;
   }
   textarea {
-    min-height: 30vh;
-    max-height: 30vh;
+    min-height: 15vh;
+    max-height: 15vh;
   }
   margin-bottom: 5vh;
 }

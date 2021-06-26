@@ -9,6 +9,7 @@ import firebase from 'firebase/app';
 export class AppComponent {
 
   constructor() {
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
       apiKey: "AIzaSyBUlFfkFcJ_Zo6VYB5UZVhg1keXp8TW0Ow",
       authDomain: "riskintel-dvio.firebaseapp.com",

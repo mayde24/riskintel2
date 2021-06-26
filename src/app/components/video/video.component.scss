@@ -94,6 +94,25 @@
   font-weight: lighter;
 }
 
+.black-right-bottom-tom {
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.intervenants {
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: 0.5s;
+  .intervenant {
+    transition: 0.5s;
+  }
+  .intervenant:hover {
+    color: #1b6d85;
+    transition: 0.5s;
+  }
+}
+
 // Cards Style -------------------------------
 
 .cards-container {
@@ -186,9 +205,6 @@
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
-}
-
-.date {
   font-size: smaller;
 }
 
@@ -196,11 +212,25 @@
   transition: 0.5s;
 }
 
+.play {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
+  .type {
+    padding-right: 10px;
+  }
+}
+
 .card-container:hover {
   transition: 0.5s;
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   transform: scale(1.05);
   .play {
+    color: #006074;
+    transition: 0.5s;
+  }
+  .type {
     color: #006074;
     transition: 0.5s;
   }

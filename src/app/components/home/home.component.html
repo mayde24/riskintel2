@@ -11,12 +11,12 @@
       <div class="black-right-top" (click)="goTo('videos')">
         <i class="fas fa-play-circle icon-black-play"></i> Voir toutes les vidéos
       </div>
-      <div class="video-miniature" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
+      <div class="video-miniature" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" (click)="goToVideo(lastable.id);">
+        <img src="{{lastable.photo}}"/>
       </div>
       <div class="black-right-bottom">
         <i class="fas fa-bell bell"></i>
-        Vous avez manqué notre dernière table ronde ? Ne vous inquiétez pas, voici le Replay. Vous avez manqué notre dernière table ronde ? Ne vous inquiétez pas, voici le Replay. Vous avez manqué notre dernière table ronde ? Ne vous inquiétez pas, voici le Replay
+        Vous avez manqué notre dernière table ronde ? Ne vous inquiétez pas, voici le Replay. Pensez à nous suivre sur les réseaux sociaux pour ne jamais rien rater !
       </div>
     </div>
   </div>
@@ -34,64 +34,16 @@
     </div>
   </div>
   <div class="cards-bottom">
-    <div class="card-container" (click)="goTo('video')" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" *ngFor="let interview of interviews;" (click)="goToVideo(interview.id);">
       <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
+        <img src="{{interview.photo}}"/>
       </div>
       <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
+        {{interview.titre}}
       </div>
       <div class="card-bottom">
         <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
+          {{interview.date}}
         </div>
         <div class="play">
           <i class="fas fa-play"></i>
@@ -114,48 +66,16 @@
     </div>
   </div>
   <div class="cards-bottom">
-    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" *ngFor="let table of tables;" (click)="goToVideo(table.id);">
       <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
+        <img src="{{table.photo}}"/>
       </div>
       <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
+        {{table.titre}}
       </div>
       <div class="card-bottom">
         <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
+          {{table.date}}
         </div>
         <div class="play">
           <i class="fas fa-play"></i>
@@ -177,48 +97,16 @@
     </div>
   </div>
   <div class="cards-bottom">
-    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
+    <div class="card-container" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" *ngFor="let talk of talks;" (click)="goToVideo(talk.id);">
       <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
+        <img src="{{talk.photo}}"/>
       </div>
       <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
+        {{talk.titre}}
       </div>
       <div class="card-bottom">
         <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card-top">
-        <img src="https://i.ytimg.com/vi/mrkRt2CMXss/maxresdefault.jpg"/>
-      </div>
-      <div class="card-middle">
-        Droit numérique, RGPD, cybersécurité risques et opportunités ?
-      </div>
-      <div class="card-bottom">
-        <div class="date">
-          Le 25/04/2021
+          {{talk.date}}
         </div>
         <div class="play">
           <i class="fas fa-play"></i>
@@ -237,26 +125,8 @@
     </div>
   </div>
   <div class="intervenants-bottom">
-    <div class="intervenant-container" (click)="goTo('intervenant');" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
-      <img src="assets/img/intervenant.png" alt="">
-    </div>
-    <div class="intervenant-container">
-      <img src="assets/img/intervenant2.png" alt="">
-    </div>
-    <div class="intervenant-container">
-      <img src="assets/img/intervenant3.png" alt="">
-    </div>
-    <div class="intervenant-container">
-      <img src="assets/img/intervenant.png" alt="">
-    </div>
-    <div class="intervenant-container">
-      <img src="assets/img/intervenant2.png" alt="">
-    </div>
-    <div class="intervenant-container">
-      <img src="assets/img/intervenant3.png" alt="">
-    </div>
-    <div class="intervenant-container">
-      <img src="assets/img/intervenant.png" alt="">
+    <div class="intervenant-container" (click)="goTo('intervenant');" (mouseover)="hoverOn()" (mouseleave)="hoverOff()" *ngFor="let intervenant of intervenants;" (click)="goToIntervenant(intervenant.id);">
+      <img src="{{intervenant.photo}}" alt="">
     </div>
   </div>
 </div>

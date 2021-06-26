@@ -3,10 +3,12 @@
 
 <!-- CONTACT --------------------------------------->
 
+<div class="banner">
+  <div class="text">Vous souhaitez nous contacter ?</div>
+  <div class="sub-text">Remplissez ce formulaire et notre équipe vous répondra dans les plus brefs délais</div>
+</div>
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()"  class="all-window">
-  <div class="background">
-    <img src="https://cdn.pixabay.com/photo/2018/07/14/11/32/network-3537400_1280.png" alt="" class="back-img">
-  </div>
   <div class="contact-container">
     <div class="info-ligne champ">
       <mat-form-field appearance="fill" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
@@ -34,7 +36,11 @@
         <mat-form-field appearance="fill" (mouseover)="hoverOn()" (mouseleave)="hoverOff()">
           <mat-label>Sujet de la prise de contact</mat-label>
           <mat-select formControlName="sujet" required>
-            <mat-option *ngFor="let sujet of sujets" value="{{sujet._valeur}}">{{sujet._message}}</mat-option>
+<!--            <mat-option *ngFor="let sujet of sujets" value="{{sujet._valeur}}">{{sujet._message}}</mat-option>-->
+            <mat-option>Signalement</mat-option>
+            <mat-option>Demande de Partenariat</mat-option>
+            <mat-option>Demande d'informations</mat-option>
+            <mat-option>Autre</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
